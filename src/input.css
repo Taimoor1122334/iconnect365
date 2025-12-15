@@ -25,18 +25,22 @@ body {
 @layer component{
      
     h1{
-        @apply text-[56px];
+        font-size: clamp(1.875rem, 2.78vw + 1rem, 3.5rem);
+        /* @apply text-[56px]; */
     }
     h2{
         font-family: "brandon-grotesque", sans-serif;
   font-weight: 500;
-        @apply text-[45px]
+  font-size: clamp(1.5rem, 2.02vw + 1rem, 2.813rem);
+        /* @apply text-[45px] */
     }
     h3{
-        @apply text-[37px]
+        font-size: clamp(1.375rem, 1.46vw + 1rem, 2.313rem);
+        /* @apply text-[37px] */
     }
     h4{
-          @apply text-[20px] text-[#FBAA06];
+        font-size:clamp(1rem, 0.277vw + 1rem, 1.25rem);
+          @apply /*text-[20px]*/ text-[#FBAA06];
            font-family: "brandon-grotesque", sans-serif;
          font-weight: 700;
     }
@@ -47,7 +51,8 @@ body {
         
     }
     p{
-        @apply text-[20px]
+        font-size: clamp(1rem, 0.277vw + 1rem, 1.25rem);
+        /* @apply text-[20px] */
     }
     .nav-logo{
         max-width: 126px !important;
@@ -58,12 +63,12 @@ body {
     .btn{
          font-family: "brandon-grotesque", sans-serif;
   font-weight: 700;
-        @apply text-[15px] bg-[#FBAA06] py-3 px-6 rounded-lg text-white hover:bg-[#e59a05]
+        @apply text-[13px] md:text-[15px]  bg-[#FBAA06] py-3 px-6 rounded-lg text-white hover:bg-[#e59a05]
     }
     .white-btn{
          font-family: "brandon-grotesque", sans-serif;
   font-weight: 700;
-        @apply text-[15px] bg-white hover:bg-[#e59a05] hover:text-white py-3 px-6 inline-block  rounded-lg;
+        @apply text-[13px] md:text-[15px] bg-white hover:bg-[#e59a05] hover:text-white py-3 px-6 inline-block  rounded-lg;
     }
 .loc-icon{
     @apply max-w-5
@@ -166,5 +171,8 @@ nav .nav-link:focus-visible::after {
 }
 
 .footer-link{
-    @apply text-[20px] underline hover:text-[#FBAA06]
+     font-family: "brandon-grotesque", sans-serif;
+  font-weight: 500;
+  font-size: clamp(1rem, 0.277vw + 1rem, 1.25rem);
+    @apply  underline hover:text-[#FBAA06]
 }

@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" Making Possibilities Happen in a
+Place That Feels Like">
     <link rel="stylesheet" href="https://use.typekit.net/njx8dso.css">
 <link rel="stylesheet" href="src/output.css">
+<link rel="icon" href="assets/images/Image 1.svg" type="image/x-icon">
 
     <title>Aimed</title>
 </head>
@@ -150,7 +153,7 @@
  <!-- ------------hero-section--------------------->
 
  <section >
-  <div class="w-full py-10 md:py-20 lg:py-30  relative flex justify-center items-center overflow-hidden"
+  <div class="w-full py-10 md:py-20 lg:py-35 object-top-right  relative flex justify-center items-center overflow-hidden"
   style="background-image: url('assets/images/hero-image.png'); background-size: cover; background-position: center;">
 
 
@@ -198,8 +201,8 @@ Place That Feels Like <span class="font-[700]">Home</span>
 <!-- ----------support-section----------------->
 
 <section class="w-full py-10 md:py-15  lg:py-20 max-w-[1440px] mx-auto">
-    <div class="w-full px-2 md:px-12 mx-auto flex flex-col lg:flex-row items-center justify-center md:gap-20 lg:gap-30 ">
-<div class="w-[50%]">
+    <div class="w-full px-2 md:px-12 mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 lg:gap-30 ">
+<div class="w-fll md:w-[50%]">
         <div class=" space-y-1">
             <h4 class="text-[#FBAA06]">A Space That Feels Like Home</h4>
             <h2>Experience the Difference
@@ -212,7 +215,7 @@ of Truly Personalized Support</h2>
 </div>
         </div>
 
-        <div class="w-[50%] ">
+        <div class="w-full md:w-[50%] ">
             <img src="assets/images/our-services.png" alt="our services">
 
         </div>
@@ -222,14 +225,43 @@ of Truly Personalized Support</h2>
 
 <!-- -------------video-section------------------>
 
-<section class="w-full py-10 md:py-15  lg:py-20 max-w-[1440px] mx-auto">
-    <div class="w-full px-2 md:px-12 lg:px-17 mx-auto  ">
-<img src="assets/images/Mask Group 2.png" alt="">
+<section class="w-full py-10 md:py-15 lg:py-20 max-w-[1300px] mx-auto">
+  <div class="relative w-full px-2 md:px-12 lg:px-17 mx-auto">
 
-    
+    <!-- Thumbnail -->
+    <img 
+      id="videoThumbnail"
+      src="assets/images/video-thumbnail.png"
+      alt="Video Thumbnail"
+      class="absolute inset-0 w-full h-full object-cover z-10"
+    />
 
-    </div>
+    <!-- Video -->
+    <video 
+      id="customVideo"
+      class="w-full h-full object-cover cursor-pointer"
+      loop
+    >
+      <source src="assets/aimed.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Play Button -->
+    <button
+      id="playBtn"
+      class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer"
+    >
+      <div class="w-20 h-20 rounded-full flex items-center justify-center shadow-lg"
+           style="background-color:#DF6600;">
+        <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"></path>
+        </svg>
+      </div>
+    </button>
+
+  </div>
 </section>
+
 
 
 <!-- ----------------our-services---------------------->
@@ -244,116 +276,90 @@ of Truly Personalized Support</h2>
 
 <div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10  max-w-[1100px] mx-auto  mt-20"
-data-aos="zoom-in" 
-        data-aos-duration="2000"
->
-        
-        <div class="fund-card relative">   
-            <div class="absolute inset-0 overflow-hidden ">
-                <img src="assets/images/residential.png" 
-                     alt="residential" 
-                     class="card-image">
-            </div>
-            <a href="#"  target="_blank">
-            <div class="absolute inset-0  flex flex-col items-center justify-center text-center">
-                <h3 class="heading ">24 Hour
-Residential</h3>
-               
-            </div>
-            </a>
+    <div class="flex flex-wrap justify-center gap-10 max-w-[1100px] mx-auto mt-20"
+     data-aos="zoom-in"
+     data-aos-duration="2000">
+
+    <div class="fund-card relative w-full max-w-[300px]">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="assets/images/residential.png" 
+                 alt="residential" 
+                 class="card-image">
         </div>
-        
-      <div class="fund-card relative">
-  <!-- Background image -->
-  <div class="absolute inset-0 overflow-hidden">
-    <img src="assets/images/supportive-living-services.png" 
-         alt="supportive-living-services" 
-         class="card-image ">
-  </div>
-
-  <!-- Centered text -->
-   <a href="#"  target="_blank">
-  <div class="absolute inset-0 flex items-center justify-center text-center">
-    <h3 class="heading ">Supportive
-Living Services</h3>
-  </div>
-  </a>
-</div>
-
-        
-        <div class="fund-card relative">
-            <div class="absolute inset-0 overflow-hidden ">
-                <img src="assets/images/Clinical-supportive-services.png" 
-                     alt="Indias 1st church Completion" 
-                     class="card-image">
+        <a href="#" target="_blank">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                <h3 class="heading">24 Hour Residential</h3>
             </div>
-            
-            <a href="#"  target="_blank">
-            <div class="absolute  inset-0  flex flex-col items-center justify-center  text-center">
-              
-                <h3 class="heading">Clinical
-Support Services</h3>
-                
-            </div>
-          </a>
-        </div>
-
-
-            <div class="fund-card relative">   
-            <div class="absolute inset-0 overflow-hidden ">
-                <img src="assets/images/Home-and-comunity.png" 
-                     alt="Home-and-comunity" 
-                     class="card-image">
-            </div>
-            <a href="#"  target="_blank">
-            <div class="absolute inset-0  flex flex-col items-center justify-center text-center">
-                <h3 class="heading ">Home and
-Community
-Services</h3>
-               
-            </div>
-            </a>
-        </div>
-        
-      <div class="fund-card relative">
-  <!-- Background image -->
-  <div class="absolute inset-0 overflow-hidden">
-    <img src="assets/images/community-supportive.png" 
-         alt="community-supportive" 
-         class="card-image ">
-  </div>
-
-  <!-- Centered text -->
-   <a href="#"  target="_blank">
-  <div class="absolute inset-0 flex items-center justify-center text-center">
-    <h3 class="heading ">Community
-Support Services</h3>
-  </div>
-  </a>
-</div>
-
-        
-        <div class="fund-card relative">
-            <div class="absolute inset-0 overflow-hidden ">
-                <img src="assets/images/AIMED-to-independence.png" 
-                     alt="Indias 1st church Completion" 
-                     class="card-image">
-            </div>
-            
-            <a href="#"  target="_blank">
-            <div class="absolute  inset-0  flex flex-col items-center justify-center  text-center">
-              
-                <h3 class="heading">AIMED to
-Independence
-(CYF)</h3>
-                
-            </div>
-          </a>
-        </div>
-        
-       
+        </a>
     </div>
+
+    <div class="fund-card relative w-full max-w-[300px]">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="assets/images/supportive-living-services.png" 
+                 alt="supportive-living-services" 
+                 class="card-image">
+        </div>
+        <a href="#" target="_blank">
+            <div class="absolute inset-0 flex items-center justify-center text-center">
+                <h3 class="heading">Supportive Living Services</h3>
+            </div>
+        </a>
+    </div>
+
+    <div class="fund-card relative w-full max-w-[300px]">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="assets/images/Clinical-supportive-services.png" 
+                 alt="Clinical-supportive-services" 
+                 class="card-image">
+        </div>
+        <a href="#" target="_blank">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                <h3 class="heading">Clinical Support Services</h3>
+            </div>
+        </a>
+    </div>
+
+    <div class="fund-card relative w-full max-w-[300px]">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="assets/images/Home-and-comunity.png" 
+                 alt="Home-and-comunity" 
+                 class="card-image">
+        </div>
+        <a href="#" target="_blank">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                <h3 class="heading">Home and Community Services</h3>
+            </div>
+        </a>
+    </div>
+
+    <div class="fund-card relative w-full max-w-[300px]">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="assets/images/community-supportive.png" 
+                 alt="community-supportive" 
+                 class="card-image">
+        </div>
+        <a href="#" target="_blank">
+            <div class="absolute inset-0 flex items-center justify-center text-center">
+                <h3 class="heading">Community Support Services</h3>
+            </div>
+        </a>
+    </div>
+
+    <div class="fund-card relative w-full max-w-[300px]">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="assets/images/AIMED-to-independence.png" 
+                 alt="AIMED-to-independence" 
+                 class="card-image">
+        </div>
+        <a href="#" target="_blank">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                <h3 class="heading">AIMED to Independence (CYF)</h3>
+            </div>
+        </a>
+    </div>
+
+</div>
+
 
 </div>
 
@@ -363,15 +369,15 @@ Independence
 <!-- --------join-team--------------->
 
 <section class="w-full py-10 md:py-15  lg:py-20 max-w-[1440px] mx-auto">
-    <div class="w-full px-2 md:px-12 mx-auto flex flex-col lg:flex-row items-center justify-center md:gap-20 lg:gap-30 ">
+    <div class="w-full px-2 md:px-12 mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10 md:gap-20 lg:gap-30 ">
 
 
-        <div class="w-[50%] ">
-            <img src="assets/images/our-services.png" alt="our services">
+        <div class="w-full md:w-[50%] ">
+            <img src="assets/images/join-team.png" alt="our services">
 
         </div>
 
-        <div class="w-[50%]">
+        <div class="w-full md:w-[50%]">
         <div class=" space-y-1">
             <h4 class="text-[#FBAA06]">Together, We Make Care Personal</h4>
             <h2>Join a Team That<br>
@@ -420,11 +426,11 @@ every role.
 <!-- --------------footer------------->
 
  <!-- Footer -->
-<footer class="bg-[#f7f7f7] py-12  ">
+<footer class="bg-[#f7f7f7] py-12 medium-text  ">
   <div class="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-12">
   <div class="w-full  mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-10">
     
-    <!-- Logo & Description -->
+    <!-- Description -->
     <div class="md:col-span-2 space-y-3">
       <p class="heading ">ABOUT US</p>
       <p class="footer-text mt-3">
@@ -479,17 +485,20 @@ York, PA  17313
       </p>
     </div>
   </div>
-  <div>
-    <img src="assets/images/Image 1.svg" alt="Aimed logo">
+  <!-----------footer-logo------------->
+  <div class="footer-logo py-4">
+    <img src="assets/images/Image 1.svg" alt="Aimed logo" class="footer-logo">
   </div>
-  <div class="flex justify-between mt-10">
+
+
+  <div class="flex flex-col md:flex-row justify-between mt-10">
     <div class="[&_a]:underline flex flex-col ">
         <a href="#" class="hover:text-[#FBAA06]">Privacy Policy</a>
         <a href="#" class="hover:text-[#FBAA06]">Terms of Use</a>
     </div>
 
   <!-- Copyright -->
-  <div class="copyright-text  ">
+  <div class="copyright-text mt-2 md:mt-0 ">
    Copyright © 2026 TechChurch.io. All Rights Reserved.
   </div>
   </div>
