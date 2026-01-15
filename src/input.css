@@ -59,6 +59,10 @@ body {
         font-size: clamp(1rem, 0.277vw + 1rem, 1.25rem);
         /* @apply text-[20px] */
     }
+    .large-p{
+        font-size: clamp(1.125rem, 0.555vw + 1rem, 1.5rem);
+        /* @apply text-[24px] */
+    }
     .nav-logo{
         max-width: 126px !important;
     }
@@ -74,6 +78,13 @@ body {
          font-family: "brandon-grotesque", sans-serif;
   font-weight: 700;
         @apply text-[13px] md:text-[15px] bg-white hover:bg-[#e59a05] hover:text-white py-3 px-6 inline-block  rounded-lg;
+    }
+    .large-btn{
+      
+         font-family: "brandon-grotesque", sans-serif;
+  font-weight: 700;
+       @apply text-[18px] md:text-[22px] lg:text-[24px] bg-[#FBAA06] py-2 px-12 rounded-lg text-white hover:bg-[#DF6600]
+    
     }
 .loc-icon{
     @apply max-w-5
