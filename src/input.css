@@ -4,8 +4,9 @@ html{
   scroll-behavior: smooth;
 }
 #about-aimed,
-#word-from-ceo  {
-  scroll-margin-top: 80px; 
+#word-from-ceo,
+#volunteer  {
+  scroll-margin-top: 150px; 
 }
 
 /* Regular */
@@ -30,6 +31,10 @@ body {
 @layer component{
      
     h1{
+        font-size: clamp(1.875rem, 2.78vw + 1rem, 3.5rem);
+        /* @apply text-[56px]; */
+    }
+     .large-heading{
         font-size: clamp(1.875rem, 2.78vw + 1rem, 3.5rem);
         /* @apply text-[56px]; */
     }
@@ -223,4 +228,12 @@ nav .nav-link:focus-visible::after {
     nav .w-4xl{
         @apply max-w-2xl mx-0
     }
+}
+
+@media (max-width:768px){
+    #about-aimed,
+#word-from-ceo,
+#volunteer  {
+  scroll-margin-top: 80px; 
+}
 }
