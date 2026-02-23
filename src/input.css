@@ -11,25 +11,35 @@ html{
 
 /* Regular */
 body {
-  font-family: "brandon-grotesque", sans-serif;
-  font-weight: 400;
+  font-family: "proxima-nova", sans-serif;
+font-weight: 400;
+font-style: normal;
   overflow-x: hidden;
 }
 
-/* Medium */
-.medium-text {
-  font-family: "brandon-grotesque", sans-serif;
-  font-weight: 500;
+.bg{
+  color:#000000;
+}
+.text{
+  color:white;
+}
+.fill{
+  color:#121212;
+}
+.border{
+  color:#707070;
 }
 
-/* Bold */
-.bold-text {
-  font-family: "brandon-grotesque", sans-serif;
-  font-weight: 700;
+p.text-sm{
+  font-size:14px;
 }
 
 @layer component{
-     
+  
+  .little-heading{
+    @apply bg-[#121212] inline-block py-1 px-5 mb-5 rounded-full text-sm border border-[#707070]
+  }
+
     h1{
         font-size: clamp(1.875rem, 2.78vw + 1rem, 3.5rem);
         /* @apply text-[56px]; */
@@ -39,8 +49,8 @@ body {
         /* @apply text-[56px]; */
     }
     h2{
-        font-family: "brandon-grotesque", sans-serif;
-  font-weight: 500;
+       
+  color: white;
   font-size: clamp(1.5rem, 2.02vw + 1rem, 2.813rem);
         /* @apply text-[45px] */
     }
@@ -49,18 +59,17 @@ body {
         /* @apply text-[37px] */
     }
     h4{
-        font-size:clamp(1rem, 0.277vw + 1rem, 1.25rem);
-          @apply /*text-[20px]*/ text-[#DF6600];
-           font-family: "brandon-grotesque", sans-serif;
-         font-weight: 700;
+        font-size:clamp(1.125rem, 2vw + 0.1rem, 1.5rem);
+          @apply /*text-[24px]*/ text-white;
+          
     }
     h5{
-         font-family: "brandon-grotesque", sans-serif;
-         font-weight: 700;
+        
         @apply text-[15px] text-white
         
     }
     p{
+      color:white;
         font-size: clamp(1rem, 0.277vw + 1rem, 1.25rem);
         /* @apply text-[20px] */
     }
@@ -72,40 +81,45 @@ body {
       @apply font-[700]  text-[#000000]
     }
     .nav-logo{
-        max-width: 126px !important;
+        max-width: 166px !important;
     }
-    .footer-logo{
-        @apply max-w-[53]
-    }
+   
     .btn{
-         font-family: "brandon-grotesque", sans-serif;
-  font-weight: 700;
-        @apply text-[13px] md:text-[15px]  bg-[#FBAA06] py-3 px-6 rounded-lg text-white hover:bg-[#DF6600]
+         background:linear-gradient(to top, #005CFF, #002E80 );
+        @apply text-[13px] md:text-[14px]   py-2 px-6 rounded-lg text-white  inline-block
+    }
+    .btn:hover{
+      background:linear-gradient(to top, #005CFF, #005CFF);
+
     }
     .white-btn{
-         font-family: "brandon-grotesque", sans-serif;
-  font-weight: 700;
-        @apply text-[13px] md:text-[15px] bg-white hover:bg-[#e59a05] hover:text-white py-3 px-6 inline-block  rounded-lg;
+        
+        @apply text-[13px] md:text-[14px] bg-white hover:bg-[#005CFF] hover:text-white py-3 px-6 inline-block  rounded-lg;
+    }
+    .grey-btn{
+        
+        @apply text-[13px] text-white md:text-[14px] bg-[#707070] hover:bg-[#005CFF] hover:text-white py-3 px-6 inline-block  rounded-lg;
     }
     .large-btn{
-      
-         font-family: "brandon-grotesque", sans-serif;
-  font-weight: 700;
-       @apply text-[18px] md:text-[22px] lg:text-[24px] bg-[#FBAA06] py-2 px-12 rounded-lg text-white hover:bg-[#DF6600]
+        background:linear-gradient(to top, #005CFF, #002E80 );
+       @apply text-[15px] md:text-[18px]   py-3 px-8 rounded-lg text-white 
     
     }
-.loc-icon{
-    @apply max-w-5
-}
-.phone-icon{
-    @apply max-w-6
-}
-.clock-icon{
-    @apply max-w-[26px]
-}
+
+    .large-btn:hover{
+background:#005CFF;
+    }
+
 nav .nav-link{
-     font-weight: 700;
+     font-size:14px;
+     color:#B2B2B2;
     @apply uppercase
+}
+
+nav .nav-link:hover{
+     
+     color:white;
+   
 }
 
 @media (max-width:1270px){
@@ -144,72 +158,37 @@ nav .nav-link {
   position: relative;
 }
 
-#active::after {
+#active{
   
-  position: absolute;
-  left: 0;
-  bottom: -37px;
-  width: 100%;
-  height: 4px; 
-  background-color: #FBAA06; 
+  color:white;
   
-}
-
-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -37px; /* distance from text */
-  width: 0%;
-  height: 4px; /* thickness of the bar */
-  background-color: #FBAA06; 
-  transition: width 0.3s ease;
-  will-change: width;
-}
-
-/* Hover and keyboard-focus (accessible) state */
-nav .nav-link:hover::after,
-nav .nav-link:focus-visible::after {
-  width: 100%;
-}
-
-@media (max-width:1023px){
-      
-  nav .nav-link::after {
-
-  bottom: -4px; 
-  
-}
 }
 
 
 .funds .fund-card {
-  max-width: 300px;
-  height: 320px;
+  max-width: 350px;
+  height: auto;
+  @apply border border-[#707070] p-3  rounded-xl overflow-hidden;
 }
 .funds .fund-card img {
 
-  @apply h-full w-full bg-cover;
-   transition: transform 0.6s ease;
+  @apply h-full w-full bg-cover rounded-xl;
+ 
 }
 
-.funds .fund-card:hover img{
-  transform: scale(1.1);
-   transition: transform 0.6s ease;
+.funds .fund-card .btn{
+  @apply mb-1
 }
- .ministry-card:hover .card-image {
-            transform: scale(1.1);
-        }
 
-.funds .fund-card h3{
-  @apply text-xl md:text-2xl lg:text-3xl text-white max-w-[280px] uppercase leading-[50px]
+
+.funds .fund-card h4{
+  @apply my-3
 }
 
 .footer-link{
-     font-family: "brandon-grotesque", sans-serif;
-  font-weight: 500;
-  font-size: clamp(1rem, 0.277vw + 1rem, 1.25rem);
-    @apply  underline hover:text-[#FBAA06]
+    
+  font-size: clamp(1rem, 2vw + 0.1rem, 1.125rem);
+    @apply text-white  hover:text-[#005CFF]
 }
 
 @media (max-width:1260px){
