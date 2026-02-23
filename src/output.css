@@ -552,6 +552,11 @@
       margin-top: calc(var(--spacing) * 30);
     }
   }
+  .md\:min-h-\[135px\] {
+    @media (width >= 48rem) {
+      min-height: 135px;
+    }
+  }
   .md\:grid-cols-4 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
