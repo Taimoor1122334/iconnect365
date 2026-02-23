@@ -153,6 +153,9 @@ nav .nav-link:hover{
 
 }
 
+.mobile-link{
+  @apply text-white 
+}
 
 nav .nav-link {
   position: relative;
