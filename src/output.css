@@ -271,6 +271,18 @@
   .h-full {
     height: 100%;
   }
+  .min-h-\[130px\] {
+    min-height: 130px;
+  }
+  .min-h-\[135px\] {
+    min-height: 135px;
+  }
+  .min-h-\[150px\] {
+    min-height: 150px;
+  }
+  .min-h-\[220px\] {
+    min-height: 220px;
+  }
   .w-3xl {
     width: var(--container-3xl);
   }
