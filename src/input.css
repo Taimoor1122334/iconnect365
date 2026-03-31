@@ -3,10 +3,9 @@
 html{
   scroll-behavior: smooth;
 }
-#about-aimed,
-#word-from-ceo,
-#volunteer  {
-  scroll-margin-top: 150px; 
+
+#about-us  {
+  scroll-margin-top: 160px; 
 }
 
 .hero{
