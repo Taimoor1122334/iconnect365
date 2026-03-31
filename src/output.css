@@ -651,6 +651,11 @@
       flex-direction: row;
     }
   }
+  .md\:gap-40 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 40);
+    }
+  }
   .md\:self-start {
     @media (width >= 48rem) {
       align-self: flex-start;
