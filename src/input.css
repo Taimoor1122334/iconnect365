@@ -47,7 +47,7 @@ p.text-sm{
     h1{
         font-size: clamp(1.875rem, 3.5vw + 1rem, 4.063rem);
         /* @apply text-[65px]; */
-        @apply leading-20
+        @apply  lg:leading-20
     }
      .large-heading{
         font-size: clamp(1.875rem, 2.78vw + 1rem, 3.5rem);
@@ -236,10 +236,3 @@ nav .nav-link {
     }
 }
 
-@media (max-width:768px){
-    #about-aimed,
-#word-from-ceo,
-#volunteer  {
-  scroll-margin-top: 80px; 
-}
-}
