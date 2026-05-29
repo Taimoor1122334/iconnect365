@@ -51,6 +51,8 @@ p.text-sm{
     }
      .large-heading{
         font-size: clamp(1.875rem, 2.78vw + 1rem, 3.5rem);
+       
+        @apply  lg:leading-16 md:leading-12 leading-8
         /* @apply text-[56px]; */
     }
     h2{
