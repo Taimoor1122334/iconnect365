@@ -241,6 +241,10 @@ nav .nav-link {
    align-self: flex-start;
 }
 
+.dropdown-link{
+  @apply block px-4 py-2 hover:text-white whitespace-nowrap
+}
+
 /* Mobile - no sticky */
 @media (max-width: 740px) {
  #sticky-image {
