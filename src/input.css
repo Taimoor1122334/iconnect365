@@ -194,7 +194,7 @@ nav .nav-link:hover{
 }
 
 .mobile-link{
-  @apply text-white 
+  @apply text-white capitalize
 }
 
 nav .nav-link {

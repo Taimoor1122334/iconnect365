@@ -82,7 +82,20 @@ Place That Feels Like">
          
   
 
-        <a href="services.html" class="mobile-link ">Services</a>
+         <div class="relative dropdown-container">
+            <button type="button" class="mobile-dropdown-toggle flex w-full items-center justify-between text-left text-white" aria-expanded="false">
+                <span>Services</span>
+                <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div class="mobile-submenu hidden overflow-hidden mt-3" style="max-height: 0; transition: max-height 0.3s ease-in-out;">
+                <a href="aiagents.html" class="mobile-link block py-2">Agentic AI Agents</a>
+                <a href="private_ai.html" class="mobile-link block py-2">Private AI Chat</a>
+                <a href="custom_applications.html" class="mobile-link block py-2">Custom Applications</a>
+                <a href="intelligent_integration.html" class="mobile-link block py-2">Intelligent Integration</a>
+            </div>
+        </div>
         
         
         <a href="contact-us.html" class="mobile-link ">Contact</a>
@@ -407,7 +420,7 @@ We don’t just build solutions—we build systems that sustain growth.</p>
 <ul class="space-y-1 text-sm  text-black mt-3">
         <li><a href="index.html" class="footer-link">Home</a></li>
         <li><a href="about.html" class="footer-link">About</a></li>
-        <li><a href="services.html" class="footer-link">Services</a></li>
+        <li><a class="footer-link">Services</a></li>
         <li><a href="jobs.html" class="footer-link">Sales</a></li>
         <li><a href="#" class="footer-link">Events</a></li>
         <li><a href="contact-us.html" class="footer-link">Contact</a></li>

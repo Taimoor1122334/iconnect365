@@ -38,7 +38,7 @@ Place That Feels Like">
         
 
         <div class="relative dropdown-container">
-            <a href="services.html" class="nav-link  " data-link="services">Services</a>
+            <a  class="nav-link  " data-link="services">Services</a>
             
             <div class="dropdown-menu absolute left-0 transform rounded-2xl py-2 px-2 bg-black top-full mt-3 hidden  border-2 border-gray-400 shadow-lg z-50  min-w-max">
                 <div class="py-1">
@@ -87,15 +87,17 @@ Place That Feels Like">
   
 
          <div class="relative dropdown-container">
-            <a href="about.html" class="nav-link  " data-link="about">Services</a>
-            
-            <div class="dropdown-menu absolute left-0 transform rounded-2xl py-2 px-2 bg-black top-full mt-3 hidden  border-2 border-gray-400 shadow-lg z-50  min-w-max">
-                <div class="py-1">
-                    <a href="aiagents.html" class="nav-link dropdown-link">Agentic AI Agents</a>
-                    <a href="private_ai.html" class="nav-link dropdown-link">Private AI Chat</a>
-                    <a href="custom_applications.html" class="nav-link dropdown-link">Custom Applications</a>
-                    <a href="intelligent_integration.html" class="nav-link dropdown-link">Intelligent Integration</a>
-                </div>
+            <button type="button" class="mobile-dropdown-toggle flex w-full items-center justify-between text-left text-white" aria-expanded="false">
+                <span>Services</span>
+                <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div class="mobile-submenu hidden overflow-hidden mt-3" style="max-height: 0; transition: max-height 0.3s ease-in-out;">
+                <a href="aiagents.html" class="mobile-link block py-2">Agentic AI Agents</a>
+                <a href="private_ai.html" class="mobile-link block py-2">Private AI Chat</a>
+                <a href="custom_applications.html" class="mobile-link block py-2">Custom Applications</a>
+                <a href="intelligent_integration.html" class="mobile-link block py-2">Intelligent Integration</a>
             </div>
         </div>
         
@@ -340,7 +342,7 @@ Common integration services include:
 <ul class="space-y-1 text-sm  text-black mt-3">
         <li><a href="index.html" class="footer-link">Home</a></li>
         <li><a href="about.html" class="footer-link">About</a></li>
-        <li><a href="services.html" class="footer-link">Services</a></li>
+        <li><a  class="footer-link">Services</a></li>
         <li><a href="jobs.html" class="footer-link">Sales</a></li>
         <li><a href="#" class="footer-link">Events</a></li>
         <li><a href="contact-us.html" class="footer-link">Contact</a></li>
