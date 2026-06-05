@@ -152,7 +152,8 @@ background:#005CFF;
 nav .nav-link{
      font-size:14px;
      color:#B2B2B2;
-    @apply capitalize
+    @apply capitalize;
+    cursor: pointer;
 }
 
 nav .nav-link:hover{
