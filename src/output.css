@@ -233,6 +233,9 @@
   .z-90 {
     z-index: 90;
   }
+  .z-95 {
+    z-index: 95;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
