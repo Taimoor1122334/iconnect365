@@ -127,6 +127,64 @@ Place That Feels Like">
         transform: translateY(-1px);
         opacity: 0.96;
       }
+      .contact-form-submit:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+      }
+      .contact-thankyou {
+        display: none;
+        text-align: center;
+        padding: 2rem 0.5rem;
+        animation: thankyouFade 0.45s ease;
+      }
+      .contact-thankyou.is-visible {
+        display: block;
+      }
+      .contact-thankyou-icon {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin: 0 auto 1.5rem;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #005cff 0%, #002e80 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .contact-thankyou-icon svg {
+        width: 2.2rem;
+        height: 2.2rem;
+        stroke: #fff;
+        fill: none;
+        stroke-width: 2.5;
+      }
+      .contact-thankyou h2 {
+        margin-bottom: 0.85rem;
+      }
+      .contact-thankyou p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.05rem;
+        line-height: 1.6;
+        max-width: 28rem;
+        margin: 0 auto 1.75rem;
+      }
+      .contact-thankyou-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        justify-content: center;
+        align-items: center;
+      }
+      @keyframes thankyouFade {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
       @media (max-width: 768px) {
         .contact-form-card {
           padding: 1.75rem;
@@ -290,75 +348,86 @@ Give us a call and speak to a member of our team today! <a href="tel:213-204-273
         
         </div>
  <div class="w-full lg:w-[50%] bg-[#121212] lg:absolute top-50 z-50 right-10" >
-       <form  method="post" class="contact-form-card">
-         <h2 class="text-white ">Get in touch with our team</h2>
-         <div class="contact-form-field">
-          
-           <input id="first_name" type="text" name="first_name" aria-label="First Name" placeholder="First Name" class="contact-form-input" />
-         </div>
-         <div class="contact-form-field">
-          
-           <input id="last_name" type="text" name="last_name" aria-label="Last Name" placeholder="Last Name" class="contact-form-input" />
-         </div>
-         <div class="contact-form-field">
-           
-           <input id="email" type="email" name="email" aria-label="Email Address" placeholder="Email Address" class="contact-form-input" />
-         </div>
-         <div class="contact-form-field">
-          
-           <input id="phone" type="tel" name="phone" aria-label="Phone Number" placeholder="Phone Number" class="contact-form-input" />
-         </div>
-         <div class="contact-form-field">
-          
-           <input id="organization" type="text" name="organization" aria-label="Organization Name" placeholder="Organization Name" class="contact-form-input" />
-         </div>
-         <div class="contact-form-field">
-           <p class="contact-form-label">Role (Select all that apply)</p>
-           <div class="contact-options-grid">
-             <label class="contact-option">
-               <input type="checkbox" aria-label="lead pastor" name="role[]" value="lead_pastor" />
-               <span>Lead Pastor</span>
-             </label>
-             <label class="contact-option">
-               <input type="checkbox" aria-label="executive pastor" name="role[]" value="executive_pastor" />
-               <span>Executive Pastor</span>
-             </label>
-             <label class="contact-option">
-               <input type="checkbox" aria-label="church administrator" name="role[]" value="church_administrator" />
-               <span>Church Administrator</span>
-             </label>
-             <label class="contact-option">
-               <input type="checkbox" aria-label="it lead" name="role[]" value="it_lead" />
-               <span>IT Lead</span>
-             </label>
-             <label class="contact-option">
-               <input type="checkbox" aria-label="board member" name="role[]" value="board_member" />
-               <span>Board Member</span>
-             </label>
-             <label class="contact-option">
-               <input type="checkbox" aria-label="worship pastor" name="role[]" value="worship_pastor" />
-               <span>Worship Pastor</span>
-             </label>
-             <label class="contact-option">
-               <input type="checkbox" aria-label="communications manager" name="role[]" value="communications_manager" />
-               <span>Communications Manager</span>
-             </label>
-             <label class="contact-option">
-               <input type="checkbox" aria-label="creative director" name="role[]" value="creative_director" />
-               <span>Creative Director</span>
-             </label>
-             <label class="contact-option">
-               <input type="checkbox" aria-label="other" name="role[]" value="other" />
-               <span>Other</span>
-             </label>
+       <div class="contact-form-card">
+         <form id="contactForm"  novalidate>
+           <h2 class="text-white ">Get in touch with our team</h2>
+           <div class="contact-form-field">
+             <input id="first_name" type="text" name="first_name" aria-label="First Name" placeholder="First Name" class="contact-form-input" required />
+           </div>
+           <div class="contact-form-field">
+             <input id="last_name" type="text" name="last_name" aria-label="Last Name" placeholder="Last Name" class="contact-form-input" required />
+           </div>
+           <div class="contact-form-field">
+             <input id="email" type="email" name="email" aria-label="Email Address" placeholder="Email Address" class="contact-form-input" required />
+           </div>
+           <div class="contact-form-field">
+             <input id="phone" type="tel" name="phone" aria-label="Phone Number" placeholder="Phone Number" class="contact-form-input" />
+           </div>
+           <div class="contact-form-field">
+             <input id="organization" type="text" name="organization" aria-label="Organization Name" placeholder="Organization Name" class="contact-form-input" />
+           </div>
+           <div class="contact-form-field">
+             <p class="contact-form-label">Role (Select all that apply)</p>
+             <div class="contact-options-grid">
+               <label class="contact-option">
+                 <input type="checkbox" aria-label="lead pastor" name="role[]" value="lead_pastor" />
+                 <span>Lead Pastor</span>
+               </label>
+               <label class="contact-option">
+                 <input type="checkbox" aria-label="executive pastor" name="role[]" value="executive_pastor" />
+                 <span>Executive Pastor</span>
+               </label>
+               <label class="contact-option">
+                 <input type="checkbox" aria-label="church administrator" name="role[]" value="church_administrator" />
+                 <span>Church Administrator</span>
+               </label>
+               <label class="contact-option">
+                 <input type="checkbox" aria-label="it lead" name="role[]" value="it_lead" />
+                 <span>IT Lead</span>
+               </label>
+               <label class="contact-option">
+                 <input type="checkbox" aria-label="board member" name="role[]" value="board_member" />
+                 <span>Board Member</span>
+               </label>
+               <label class="contact-option">
+                 <input type="checkbox" aria-label="worship pastor" name="role[]" value="worship_pastor" />
+                 <span>Worship Pastor</span>
+               </label>
+               <label class="contact-option">
+                 <input type="checkbox" aria-label="communications manager" name="role[]" value="communications_manager" />
+                 <span>Communications Manager</span>
+               </label>
+               <label class="contact-option">
+                 <input type="checkbox" aria-label="creative director" name="role[]" value="creative_director" />
+                 <span>Creative Director</span>
+               </label>
+               <label class="contact-option">
+                 <input type="checkbox" aria-label="other" name="role[]" value="other" />
+                 <span>Other</span>
+               </label>
+             </div>
+           </div>
+           <div class="contact-form-field">
+             <label class="contact-form-label text-white" for="message">Briefly explain how we can assist</label>
+             <textarea id="message" name="message" placeholder="Tell us more about your needs..." class="contact-form-textarea" required></textarea>
+           </div>
+           <button type="submit" class="contact-form-submit" id="contactSubmitBtn">Submit Form</button>
+         </form>
+
+         <div id="contactThankYou" class="contact-thankyou" role="status" aria-live="polite">
+           <div class="contact-thankyou-icon" aria-hidden="true">
+             <svg viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+             </svg>
+           </div>
+           <h2 class="text-white">Thank You!</h2>
+           <p>Your message has been received. Our team will review it and get back to you shortly.</p>
+           <div class="contact-thankyou-actions ">
+             <button type="button" id="sendAnotherBtn" class="contact-form-submit">Send Another Message</button>
+             <a href="index.html" class="semi-large-p text-white hover:text-blue-500">Back to Home</a>
            </div>
          </div>
-         <div class="contact-form-field">
-           <label class="contact-form-label text-white" for="message">Briefly explain how we can assist</label>
-           <textarea id="message" name="message" placeholder="Tell us more about your needs..." class="contact-form-textarea"></textarea>
-         </div>
-         <button type="submit" class="contact-form-submit">Submit Form</button>
-       </form>
+       </div>
     </div>
 
     </div>
@@ -448,6 +517,50 @@ Boston, MA 02116
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    (function () {
+      var form = document.getElementById("contactForm");
+      var thankYou = document.getElementById("contactThankYou");
+      var submitBtn = document.getElementById("contactSubmitBtn");
+      var sendAnotherBtn = document.getElementById("sendAnotherBtn");
+
+      if (!form || !thankYou) return;
+
+      function showThankYou() {
+        form.style.display = "none";
+        thankYou.classList.add("is-visible");
+        thankYou.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      function showForm() {
+        thankYou.classList.remove("is-visible");
+        form.reset();
+        form.style.display = "block";
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit Form";
+        form.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        // Swap to thank-you once a real endpoint is connected;
+        // for now this gives immediate confirmation UI.
+        window.setTimeout(showThankYou, 450);
+      });
+
+      if (sendAnotherBtn) {
+        sendAnotherBtn.addEventListener("click", showForm);
+      }
+    })();
   </script>
     
 </body>
